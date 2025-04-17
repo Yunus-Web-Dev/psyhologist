@@ -16,7 +16,7 @@
                 <h1>Я Федоров Вадим Николаевич</h1>
                 <p>Практикующий психолог-сексолог. Автор романов и специалист по гендерным отношениям. Я не волшебник,
                     но я помогу Вам посмотреть на ситуацию под другим углом и это обязательно Вам поможет.</p>
-                <a href="#">Напишите или позвоните мне <img src="./src/assets/images/arrow.svg" alt="arrow"
+                <a href="#anchor">Напишите или позвоните мне <img src="./src/assets/images/arrow.svg" alt="arrow"
                         class="arrow"></a>
             </div>
             <div class="author_image_container">
@@ -107,6 +107,14 @@
             </div>
             <img src="./src/assets/images/meeting.png" alt="meeting" class="meeting">
         </section>
+        <!-- Popup -->
+<div id="popup" class="popup hidden">
+    <div class="popup-overlay" onclick="closePopup()"></div>
+    <div class="popup-content">
+        <img id="popup-img" src="" alt="diplom-large">
+        <button class="close-btn" onclick="closePopup()">×</button>
+    </div>
+</div>
         <section class="diploms">
             <div class="line">
                 <h2>Диплом </h2>
@@ -120,7 +128,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="anchor">
         <h2>Свяжитесь со мной</h2>
         <div class="socials">
             <a href="#">Mail fedorov@psiho.pro</a>
