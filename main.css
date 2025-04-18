@@ -366,6 +366,27 @@ html {
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    overflow: auto;
+    scrollbar-width: thin;              /* Firefox */
+    scrollbar-color: #999 #2b2b2b;      /* Firefox */
+}
+
+/* Для Chrome, Edge, Safari */
+.popup::-webkit-scrollbar {
+    width: 8px;
+}
+.popup::-webkit-scrollbar-track {
+    background: #2b2b2b;
+    border-radius: 4px;
+}
+
+.popup::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 4px;
+}
+
+.popup::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
 }
 
 .popup.hidden {
@@ -374,26 +395,32 @@ html {
 
 .popup-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    padding: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
 }
 
 .popup-content img {
-    width: 100%;
+    width: 800px; /* 👈 фиксированный размер на десктопе */
+    max-width: 100%; /* 👈 чтобы не вылазил за экран на мобилке */
     height: auto;
+    object-fit: contain;
     border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .close-btn {
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: 10px;
+    right: 10px;
     background: #fff;
     border: none;
     font-size: 24px;
     cursor: pointer;
     padding: 5px 10px;
     border-radius: 50%;
+    z-index: 10;
 }
 
 .popup-overlay {
@@ -403,6 +430,7 @@ html {
     width: 100%;
     height: 100%;
 }
+
 
 /* diploms end */
 
