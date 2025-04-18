@@ -104,6 +104,11 @@ html {
     border-top-right-radius: 153px;
     border-bottom-right-radius: 153px;
 }
+@media (max-width:1000px) {
+    .author_image_container .list {
+        display: none;
+    }
+}
 
 /* main_hero end */
 
